@@ -1,6 +1,6 @@
 # HW_Week04_Day03
 The Home Work has to be delievered before 9AM ⚠️
-# What you'll do
+# What you'll do 📋
 ## You'll learn how to design and construct an app using the architecture components Room, ViewModel, and LiveData. Your app will:
 - work with a database to get and save data, and pre-populate the database with sample words.
 - display all the words in a `RecyclerView` in the `MainActivity` class.
@@ -10,4 +10,9 @@ The Home Work has to be delievered before 9AM ⚠️
 
 
 <img src="screenshot.png" alt="drawing" width="300"/>  |  <img src="screenshot1.png" alt="drawing" width="300"/> |  <img src="screenshot2.png" alt="drawing" width="300"/>
+
+# Learning Resources  📚
+* [Android Recyclerview](https://developer.android.com/guide/topics/ui/layout/recyclerview)
+* [Android room database](https://developer.android.com/training/data-storage/room)
+
 
