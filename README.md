@@ -9,5 +9,5 @@ The Home Work has to be delievered before 9AM ⚠️
 ## The app is no-frills, but sufficiently complex that you can use it as a template to build upon. Here's a preview:
 
 
-<img src="screenshot.png" alt="drawing" width="250"/>  |  <img src="screenshot1.png" alt="drawing" width="250"/> |  <img src="screenshot2.png" alt="drawing" width="250"/>
+<img src="screenshot.png" alt="drawing" width="300"/>  |  <img src="screenshot1.png" alt="drawing" width="300"/> |  <img src="screenshot2.png" alt="drawing" width="300"/>
 
