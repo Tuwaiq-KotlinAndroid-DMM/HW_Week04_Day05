@@ -1,7 +1,7 @@
-# HW_Week04_Day03
+# HW_Week04_Day04
 The Home Work has to be delievered before 9AM ⚠️
 # What you'll do 📋
-## You'll learn how to design and construct an app using the architecture components Room, ViewModel, and LiveData. Your app will:
+## You'll learn how to design and construct an app using the architecture components Room. Your app will:
 - work with a database to get and save data, and pre-populate the database with sample words.
 - display all the words in a `RecyclerView` in the `MainActivity` class.
 - open a second activity when the user taps the + button. When the user enters a word, that word is added to the database and displayed in the `RecyclerView` list.
