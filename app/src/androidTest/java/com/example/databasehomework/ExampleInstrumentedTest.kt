@@ -1,4 +1,4 @@
-package sa.edu.twuaiq.hw_week04_day05
+package com.example.databasehomework
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("sa.edu.twuaiq.hw_week04_day05", appContext.packageName)
+        assertEquals("com.example.databasehomework", appContext.packageName)
     }
 }
