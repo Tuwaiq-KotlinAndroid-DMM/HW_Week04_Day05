@@ -1,5 +1,5 @@
 # HW_Week04_Day05
-The Home Work has to be delievered before 9AM ⚠️
+The Home Work has to be delivered before 9AM ⚠️
 # What you'll do 📋
 ## You'll learn how to design and construct an app using the architecture components Room. Your app will:
 - work with a database to get and save data, and pre-populate the database with sample words.
