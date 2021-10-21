@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">HW_Week04_Day05</string>
+    <string name="WordTextView">TextView</string>
+    <string name="add_word_edit_text">Add Word</string>
 </resources>
