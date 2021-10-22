@@ -28,7 +28,7 @@ class Add_Data : AppCompatActivity() {
         database = Room.databaseBuilder(
             this,
             WordsDatabase::class.java,
-            "amazon-database"
+            "words-database"
         ).build()
 
         wordsDao = database.wordsDao()
