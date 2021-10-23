@@ -28,18 +28,20 @@ class Addadapter(val context: Context,
 
     override fun onBindViewHolder(holder: hViewHolder, position: Int) {
         holder.NameTextView.text = addList[position].productName
-//        holder.itemView.setOnClickListener {
-//            val intent = Intent(context, Table::class.java)
-//            intent.putExtra("name",addList[position].productName)
-//
-//            context.startActivity(intent)
-//
-//        }
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, Table::class.java)
+            intent.putExtra("name",addList[position].productName)
+
+            context.startActivity(intent)
+
+        }
     }
 
     override fun getItemCount(): Int {
         return addList.size
     }
+
+
 
 
 }
