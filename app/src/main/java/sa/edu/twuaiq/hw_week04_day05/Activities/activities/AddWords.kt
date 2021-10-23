@@ -23,7 +23,7 @@ class AddWords : AppCompatActivity() {
             setContentView(R.layout.activity_add_words)
 
             dataBase = Room.databaseBuilder(this, WordsDataBase::class.java,
-                "Word-database"
+                "Words-database"
             ).build()
            wordsDao = dataBase.wordsDao()
 

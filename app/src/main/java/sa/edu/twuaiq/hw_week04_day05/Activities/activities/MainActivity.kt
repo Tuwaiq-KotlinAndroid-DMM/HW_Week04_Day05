@@ -48,16 +48,19 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
         addButton.setOnClickListener{
             val intent = Intent(this, AddWords:: class.java)
             startActivity(intent)
         }
+        getWordsFromDatabase ()
     }
 
     override fun onRestart() {
-        super.onRestart()
 
+        super.onRestart()
+        getWordsFromDatabase () }
+
+ fun getWordsFromDatabase () {
         GlobalScope.launch {
 
             words.clear()
@@ -65,6 +68,6 @@ class MainActivity : AppCompatActivity() {
 
         }
         WordsAdapterClass.notifyDataSetChanged()
-    }
 
+    }
 }
