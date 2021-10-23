@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         dataBase = Room.databaseBuilder(
             this,
             WordsDataBase::class.java,
-            "words-database" ).build()
+            "Words-database" ).build()
 
         wordsDao = dataBase.wordsDao()
 
