@@ -11,10 +11,9 @@ interface TextDao {
 
     // suspend -> to work in background thread`
     @Insert
-    suspend fun textWords(productModel: TextModel)
+    suspend fun addWords(productModel: TextModel)
 
-    @Query("SELECT * FROM TextModel" +
-            "")
+    @Query("SELECT * FROM WordsModel")
     suspend fun getWords():List<TextModel>
 }
 

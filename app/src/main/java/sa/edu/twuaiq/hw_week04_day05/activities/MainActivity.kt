@@ -6,30 +6,26 @@ import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import sa.edu.twuaiq.hw_week04_day05.R
-import sa.edu.twuaiq.hw_week04_day05.adapters.TextRecyclarAdapter
+import sa.edu.twuaiq.hw_week04_day05.adapters.TextRecyclerViewAdapter
 import sa.edu.twuaiq.hw_week04_day05.database.DatabaseBulid
 import sa.edu.twuaiq.hw_week04_day05.database.TextDao
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-
-
 import sa.edu.twuaiq.hw_week04_day05.model.TextModel
 
 class MainActivity : AppCompatActivity() {
 
     val wordsList = mutableListOf<TextModel>()
 
-    //private lateinit var database: WordsDatabase
     private lateinit var textDao: TextDao
 
     private lateinit var textRecyclerView: RecyclerView
-    private lateinit var textRecyclerViewAdapter: TextRecyclarAdapter
+    private lateinit var textRecyclerViewAdapter: TextRecyclerViewAdapter
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
 
 
 
@@ -39,10 +35,10 @@ class MainActivity : AppCompatActivity() {
 
         val addWords: FloatingActionButton = findViewById(R.id.add_floating_button)
         textRecyclerView = findViewById(R.id.recyclerView)
-        textRecyclerViewAdapter = TextRecyclarAdapter(this, wordsList)
+        textRecyclerViewAdapter = TextRecyclerViewAdapter(this, wordsList)
 
 
-        textRecyclerView.adapter = TextRecyclarAdapter
+        textRecyclerView.adapter = textRecyclerViewAdapter
 
         addWords.setOnClickListener {
 
@@ -65,7 +61,7 @@ class MainActivity : AppCompatActivity() {
             wordsList.clear()
             wordsList.addAll(textDao.getWords())
         }
-        textRecyclerView.notifyDataSetChanged()
+        textRecyclerViewAdapter.notifyDataSetChanged()
     }
 }
 

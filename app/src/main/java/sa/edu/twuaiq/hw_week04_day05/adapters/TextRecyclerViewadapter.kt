@@ -5,14 +5,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import org.w3c.dom.Text
 import sa.edu.twuaiq.hw_week04_day05.R
+import sa.edu.twuaiq.hw_week04_day05.activities.MainActivity
 import sa.edu.twuaiq.hw_week04_day05.model.TextModel
 
-class TextRecyclarAdapter (
-    val text:Text,
+class TextRecyclerViewAdapter(
+    val text: MainActivity,
     val textList: MutableList<TextModel>): RecyclerView.Adapter
-<TextRecyclarAdapter.TextViewHolder>(){
+    <TextRecyclerViewAdapter.TextViewHolder>(){
     class TextViewHolder(view: View): RecyclerView.ViewHolder(view){
         val textNameTextView: TextView = view.findViewById(R.id.activity_save_text)
     }

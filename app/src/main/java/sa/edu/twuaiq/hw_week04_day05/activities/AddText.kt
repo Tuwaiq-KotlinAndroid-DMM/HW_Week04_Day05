@@ -37,7 +37,7 @@ class AddText : AppCompatActivity() {
         addButton.setOnClickListener {
 
             GlobalScope.launch {
-                textDao.textWords(
+                textDao.addWords(
                     TextModel(
                         wordNameEditText.text.toString()
                     )
