@@ -25,8 +25,8 @@ class TextAdapter (
     }
 
     override fun onBindViewHolder(holder: TextViewHolder, position: Int) {
-        val text = textlist[position]
-        holder.textview.text = text.textView
+
+        holder.textview.text = textlist[position].textView
     }
 
     override fun getItemCount(): Int {

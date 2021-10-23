@@ -9,6 +9,7 @@ import androidx.room.Room
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import sa.edu.twuaiq.hw_week04_day05.R
+import sa.edu.twuaiq.hw_week04_day05.database.ItextDao
 import sa.edu.twuaiq.hw_week04_day05.database.TextDatabase
 import sa.edu.twuaiq.hw_week04_day05.model.TextModel
 
@@ -26,7 +27,7 @@ class AddText : AppCompatActivity() {
         database = Room.databaseBuilder(
             this,
             TextDatabase::class.java,
-            "amazon-database"
+            "text-database"
         ).build()
 
        textDao = database.textDao()

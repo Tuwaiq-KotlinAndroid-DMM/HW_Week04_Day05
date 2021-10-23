@@ -11,6 +11,7 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import sa.edu.twuaiq.hw_week04_day05.R
 import sa.edu.twuaiq.hw_week04_day05.adapter.TextAdapter
+import sa.edu.twuaiq.hw_week04_day05.database.ItextDao
 import sa.edu.twuaiq.hw_week04_day05.database.TextDatabase
 import sa.edu.twuaiq.hw_week04_day05.model.TextModel
 
@@ -22,6 +23,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var textRecyclerView: RecyclerView
     private lateinit var textsRecyclerViewAdapter: TextAdapter
     val textview : TextView = findViewById(R.id.textview)
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -53,9 +56,9 @@ class MainActivity : AppCompatActivity() {
             text.clear()
             textDao.gettext()
             text.addAll(textDao.gettext())
-            textsRecyclerViewAdapter.notifyDataSetChanged()
-        }
 
+        }
+        textsRecyclerViewAdapter.notifyDataSetChanged()
     }
     override fun onRestart() {
         super.onRestart()
