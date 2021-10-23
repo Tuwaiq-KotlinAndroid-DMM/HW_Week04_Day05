@@ -36,12 +36,12 @@ class MainActivity : AppCompatActivity() {
         textDao = DatabaseBulid(this).database().textDao()
 
 
-        // views declaration from activity main
+
         val addWords: FloatingActionButton = findViewById(R.id.add_floating_button)
         textRecyclerView = findViewById(R.id.recyclerView)
         textRecyclerViewAdapter = TextRecyclarAdapter(this, wordsList)
 
-        // assign adapter to recyclerview
+
         textRecyclerView.adapter = TextRecyclarAdapter
 
         addWords.setOnClickListener {
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
 
             startActivity(intent)
         }
-        //__________
+
         getWordsFromDatabase()
     }
 
@@ -61,12 +61,11 @@ class MainActivity : AppCompatActivity() {
 
     fun getWordsFromDatabase(){
 
-        // GlobalScope to run background thread
         GlobalScope.launch {
             wordsList.clear()
             wordsList.addAll(textDao.getWords())
         }
-        textRecyclarAdapter.notifyDataSetChanged()
+        textRecyclerView.notifyDataSetChanged()
     }
 }
 

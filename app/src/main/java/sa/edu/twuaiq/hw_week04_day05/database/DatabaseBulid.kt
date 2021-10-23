@@ -7,7 +7,7 @@ import org.w3c.dom.Text
 
 class DatabaseBulid (var text: Text) {
     fun database():TextDatabase{
-        return Room.databasebulid(
+        return Room.databaseBuilder(
             text,
             TextDatabase::class.java,
             "text-database"
