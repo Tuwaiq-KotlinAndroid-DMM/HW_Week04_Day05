@@ -5,16 +5,17 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="4dp">
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp">
 
     <TextView
         android:id="@+id/WordtextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:background="#FFC107"
-        android:backgroundTint="#FFC107"
         android:paddingStart="4dp"
+        android:paddingEnd="4dp"
         android:text="@string/WordTextView"
         android:textColor="#000000"
         android:textSize="18sp"
