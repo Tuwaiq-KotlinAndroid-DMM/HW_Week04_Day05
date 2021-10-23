@@ -1,0 +1,67 @@
+package sa.edu.twuaiq.hw_week04_day05.activities
+
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import sa.edu.twuaiq.hw_week04_day05.R
+import sa.edu.twuaiq.hw_week04_day05.adapters.TextRecyclerViewAdapter
+import sa.edu.twuaiq.hw_week04_day05.database.DatabaseBulid
+import sa.edu.twuaiq.hw_week04_day05.database.TextDao
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import sa.edu.twuaiq.hw_week04_day05.model.TextModel
+
+class MainActivity : AppCompatActivity() {
+
+    val wordsList = mutableListOf<TextModel>()
+
+    private lateinit var textDao: TextDao
+
+    private lateinit var textRecyclerView: RecyclerView
+    private lateinit var textRecyclerViewAdapter: TextRecyclerViewAdapter
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+
+
+        textDao = DatabaseBulid(this).database().textDao()
+
+
+
+        val addWords: FloatingActionButton = findViewById(R.id.add_floating_button)
+        textRecyclerView = findViewById(R.id.recyclerView)
+        textRecyclerViewAdapter = TextRecyclerViewAdapter(this, wordsList)
+
+
+        textRecyclerView.adapter = textRecyclerViewAdapter
+
+        addWords.setOnClickListener {
+
+            val intent = Intent(this, AddText::class.java)
+
+            startActivity(intent)
+        }
+
+        getWordsFromDatabase()
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        getWordsFromDatabase()
+    }
+
+    fun getWordsFromDatabase(){
+
+        GlobalScope.launch {
+            wordsList.clear()
+            wordsList.addAll(textDao.getWords())
+        }
+        textRecyclerViewAdapter.notifyDataSetChanged()
+    }
+}
+
