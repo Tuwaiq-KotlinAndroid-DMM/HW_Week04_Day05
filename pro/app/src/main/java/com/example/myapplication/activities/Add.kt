@@ -1,10 +1,14 @@
-package com.example.myapplication
+package com.example.myapplication.activities
 
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.room.Room
+import com.example.myapplication.Database
+import com.example.myapplication.Deo
+import com.example.myapplication.R
+import com.example.myapplication.Table
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
