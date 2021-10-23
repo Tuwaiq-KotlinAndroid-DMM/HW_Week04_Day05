@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HW_Week04_Day05">
         <activity
-            android:name=".MainActivity"
+            android:name="sa.edu.twuaiq.hw_week04_day05.Activities.activities.AddWords"
+            android:exported="true" />
+        <activity
+            android:name="sa.edu.twuaiq.hw_week04_day05.Activities.activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
