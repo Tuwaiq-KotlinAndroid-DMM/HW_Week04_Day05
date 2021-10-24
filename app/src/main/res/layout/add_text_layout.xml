@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <TextView
+    <EditText
         android:id="@+id/add_text"
         android:layout_width="408dp"
         android:layout_height="53dp"
@@ -14,7 +14,7 @@
         android:layout_marginEnd="353dp"
         android:gravity="center"
         android:hint="add text"
-        android:text="TextView"
+        android:text="EditText"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

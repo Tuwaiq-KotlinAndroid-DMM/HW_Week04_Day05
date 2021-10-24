@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var textDao: ItextDao
     private lateinit var textRecyclerView: RecyclerView
     private lateinit var textsRecyclerViewAdapter: TextAdapter
-    val textview : TextView = findViewById(R.id.textview)
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
