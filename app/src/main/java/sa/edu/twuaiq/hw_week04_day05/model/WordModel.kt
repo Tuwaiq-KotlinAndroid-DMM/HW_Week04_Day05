@@ -5,7 +5,8 @@ import androidx.room.PrimaryKey
 
 
 @Entity
-data class WordModel (val words: String, @PrimaryKey(autoGenerate = true)
-
-val id: Int = 0)
+data class WordModel (
+    val words: String,
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0)
 

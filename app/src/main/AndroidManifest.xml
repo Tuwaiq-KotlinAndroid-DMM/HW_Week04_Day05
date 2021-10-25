@@ -11,12 +11,19 @@
         android:theme="@style/Theme.HW_Week04_Day05">
         <activity
             android:name=".avtivity.MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:supportsRtl="true"
+            android:theme="@style/Theme.HW_Week04_Day05">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".avtivity.Addword"
+            android:exported="true">
         </activity>
     </application>
 

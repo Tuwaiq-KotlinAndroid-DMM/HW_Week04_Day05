@@ -3,6 +3,7 @@ package sa.edu.twuaiq.hw_week04_day05.avtivity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Database
 import androidx.room.Room
@@ -50,9 +51,10 @@ class MainActivity : AppCompatActivity() {
         recyclerView.adapter = wordAdapter
 
         floatingButton.setOnClickListener {
-            intent = Intent(this, Addword::class.java)
+            val intent = Intent(this, Addword::class.java)
 
             startActivity(intent)
+
         }
         getWordFromDatabase()
 

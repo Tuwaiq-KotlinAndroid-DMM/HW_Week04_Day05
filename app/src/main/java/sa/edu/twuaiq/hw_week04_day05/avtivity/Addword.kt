@@ -1,11 +1,9 @@
 package sa.edu.twuaiq.hw_week04_day05.avtivity
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-import androidx.room.Database
 import androidx.room.Room
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -29,7 +27,7 @@ class Addword : AppCompatActivity() {
         database = Room.databaseBuilder(
             this,
             WordDatabase::class.java,
-            "amazon-database"
+            "word-database"
         ).build()
 
         wordDao = database.wordDao()
