@@ -5,11 +5,11 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.kotlin.homeworkwekk4day5.R
-import com.kotlin.homeworkwekk4day5.adapter.DatabaseBuilder
 import com.kotlin.homeworkwekk4day5.database.WordDao
 import com.kotlin.homeworkwekk4day5.model.WordModel
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import sa.edu.twuaiq.hw_week04_day05.database.DatabaseBuilder
 
 class AddWord : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +25,7 @@ class AddWord : AppCompatActivity() {
 
         addWordButton.setOnClickListener {
             GlobalScope.launch {
-                wordDao.AddWord(
+                wordDao.addWord(
                     WordModel(wordEditText.text.toString())
                 )
             }

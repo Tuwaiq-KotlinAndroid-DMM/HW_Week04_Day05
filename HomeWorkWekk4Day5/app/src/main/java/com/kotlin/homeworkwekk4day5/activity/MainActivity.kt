@@ -6,16 +6,15 @@ import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.kotlin.homeworkwekk4day5.R
-import com.kotlin.homeworkwekk4day5.adapter.DatabaseBuilder
 import com.kotlin.homeworkwekk4day5.adapter.WordAdapter
 import com.kotlin.homeworkwekk4day5.database.WordDao
 import com.kotlin.homeworkwekk4day5.model.WordModel
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import sa.edu.twuaiq.hw_week04_day05.database.DatabaseBuilder
 
 class MainActivity : AppCompatActivity() {
 
-    class MainActivity : AppCompatActivity() {
         private lateinit var recyclerView: RecyclerView
         private lateinit var wordAdapter: WordAdapter
 
@@ -63,4 +62,4 @@ class MainActivity : AppCompatActivity() {
             wordAdapter.notifyDataSetChanged()
         }
     }
-}
+

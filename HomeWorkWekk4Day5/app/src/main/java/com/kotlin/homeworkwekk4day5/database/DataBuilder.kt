@@ -1,15 +1,15 @@
-package com.kotlin.homeworkwekk4day5.adapter
+package sa.edu.twuaiq.hw_week04_day05.database
 
 import android.content.Context
 import androidx.room.Room
-import com.kotlin.homeworkwekk4day5.database.WordsDatabase
-
 
 class DatabaseBuilder(val context: Context) {
     fun buildDB(): WordsDatabase {
         return Room.databaseBuilder(
-            context, WordsDatabase::class.java,
+            context,
+            WordsDatabase::class.java,
             "Word-database"
         ).build()
     }
 }
+
